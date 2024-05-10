@@ -23,7 +23,6 @@ def show_catalog(request):
 
 
 def show_product(request, slug):
-    # Используем get_object_or_404 для получения объекта Phone по slug
     phone = get_object_or_404(Phone, slug=slug)
     template = 'product.html'
     context = {'phone': phone}
